@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: montserrat, sans-serif;
+}
+
+input, button {
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.App{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #53565a;
+}
+
+form {
+  display: block;
+  position: relative;
+}
+
+form:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  z-index: 1;
+  /*background-image: linear-gradient(to bottom right, #FFCE00, #FE4880);*/
+  background-image: linear-gradient(to bottom right, #a8fbda, #558ba8, #4d5f93);
+}
+
+form .innerForm {
+  position: relative;
+  display: block;
+  background-color: #FFF;
+  padding: 30px;
+  z-index: 2;
+  width: 550px;
+  height: 470px;
+}
+
+form .innerForm h2{
+  color: #AAA;
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+form .innerForm .formGroup {
+  display: block;
+  width: 250px;
+  margin-bottom: 30px;
+}
+
+form .innerForm .pair {
+  display: flex;
+  flex-direction: row;
+}
+
+.innerForm .formGroup label{
+  display: block;
+  color: #666;
+  font-size: 12px;
+  margin-bottom: 5px;
+  transition: 0.4s;
+}
+
+.innerForm .formGroup:focus-within label{
+  color: #F34880;
+}
+
+form .innerForm .formGroup input {
+  display: block;
+  width: 200px;
+  padding: 10px 15px;
+  background-color: #F8F8F8;
+  border-radius: 8px;
+  border-color: #e4e4e4;
+  border-width: 1px;
+  border-style: solid;
+  transition: 0.4s;
+}
+
+form .innerForm .formGroup input:focus {
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+}
+
+form .innerForm .submitClass {
+  display: flex;
+  justify-content: center;
+}
+
+form .innerForm .tabClass {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+form .innerForm input[type="submit"] {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 8px;
+  /*background-image: linear-gradient(to right, #FFCE00 50%, #FFCE00 50%, #FE4880);*/
+  background-image: linear-gradient(to bottom right, #a8fbda, #5f77bc);
+  background-size: 200%;
+  background-position: 0%;
+  transition: 0.4s;
+  color: #FFF;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+form .innerForm input[type="submit"]:hover {
+  background-position: 100% 0%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 500px;
+  height: 300px;
+  background: #f1f1f1;
+  margin: 100px auto 0;
+  word-break: break-all;
+  border: 1px solid rgba(0, 0, 0, 0.274);
+}
+
+.bloc-tabs {
+  display: flex;
+  /*background-image: linear-gradient(to bottom right, #FFCE00, #FE4880);*/
+  background-image: linear-gradient(to bottom right, #a8fbda, #5f77bc);
+  z-index: 2;
+}
+.tabs {
+
+  padding: 15px;
+  text-align: center;
+  width: 50%;
+  background: rgba(128, 128, 128, 0.075);
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+  box-sizing: content-box;
+  position: relative;
+  outline: none;
+  z-index: 2;
+}
+.tabs:not(:last-child){
+  border-right: 1px solid rgba(0, 0, 0, 0.274);
+}
+
+.active-tabs  {
+  background: white;
+  border-bottom: 1px solid transparent;
+}
+
+.active-tabs::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% + 2px);
+  height: 5px;
+}
+
+button {
+  border: none;
+  
+}
+.content-tabs {
+  flex-grow : 1;
+}
+.content {
+  background: white;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.content h2 {
+  padding: 0px 0 5px 0px;
+}
+.content hr {
+  width: 100px;
+  height: 2px;
+  background: #222;
+  margin-bottom: 5px;
+}
+.content p {
+  width: 100%;
+  height: 100%;
+}
+.active-content {
+  display: block;
+}
